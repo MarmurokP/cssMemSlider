@@ -59,6 +59,12 @@ input{
     background-size: contain;    
 }
 
+.under-img{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
 
 
 .slider-buttons{
@@ -78,10 +84,20 @@ input{
   }
 
   .meme-text{
-    width: 100%;
+    width: 70%;
     align-self: end;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .text{
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+    padding-right: 80%;
+    transform: translateX(0);
+    transition: .4s;
   }
 
   
@@ -96,4 +112,18 @@ input{
 }
   #btn-4:checked ~ .slider > .memes-div > .memes > .meme-img {
     transform: translate(-330%,0);  
+}
+
+
+  #btn-1:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(0,0);  
+}
+  #btn-2:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(-89%,0);  
+}
+  #btn-3:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(-177%,0);  
+}
+  #btn-4:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(-295%,0);  
 }
