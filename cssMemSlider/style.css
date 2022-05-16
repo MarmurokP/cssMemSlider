@@ -49,8 +49,7 @@ input{
     align-items: center;
     cursor: default;
     user-select: none;    
-    justify-content: space-between; 
-      
+    justify-content: space-between;       
 }
 
 .memes-div{
@@ -82,7 +81,6 @@ input{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
 }
 
 
@@ -96,7 +94,6 @@ input{
   height: 2em;
   align-items: center;
   justify-content: center;
-
 }
 
 label{
@@ -108,13 +105,11 @@ label{
 
   .btn {   
     height: .8em;
-    width: .8em;
-    /* margin: 0 .2px; */
+    width: .8em;    
     background-color: rgb(15, 226, 15);
     border: .2em rgb(15, 226, 15) solid;
     border-radius: 50%;
-    display: inline-block;
-    /* transition: background-color 0.6s ease;     */
+    display: inline-block;    
   }
 
   label:hover > .btn{
@@ -124,8 +119,7 @@ label{
   }
 
   label:active > .btn{
-    background-color: rgb(174, 245, 174);
-    /* border: .2em rgb(155, 245, 155) solid; */
+    background-color: rgb(174, 245, 174);    
   }
 
   .meme-text{
