@@ -1,0 +1,291 @@
+body{
+    background-color: rgb(15, 15, 15);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+html{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+header{    
+  flex: 0 0 auto;
+}
+main{    
+  flex: 1 0 auto;
+}
+footer{   
+  flex: 0 0 auto;
+}
+
+.wrapper{
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: #ffffff;
+    font-family: 'Water Brush';
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+input{
+  display: none;
+}
+
+.slider{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40%;
+    overflow-x: hidden;
+    align-items: center;
+    cursor: default;
+    user-select: none;    
+    justify-content: space-between;       
+}
+
+.memes-div{
+  display: flex;
+  width: 100%;
+  overflow: hidden;  
+}
+
+.memes{ 
+  display: flex;   
+  align-items: center;
+}
+
+.meme-img{
+    width: 32rem;
+    justify-content: space-between;
+    transform: translate(0,0);    
+    transition: .4s;     
+}
+
+
+.bg-img{
+    width: 100%;    
+    background-size: contain;    
+}
+
+.under-img{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.slider-buttons{  
+    justify-content: space-around;
+}
+
+.label-link{
+  display: inline-flex;
+  width: 1.5em;
+  height: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+label{
+  cursor: pointer;
+  padding: .4em;
+  margin: -.4em;
+  transition:  0.6s ease;  
+}
+
+  .btn {   
+    height: .8em;
+    width: .8em;    
+    background-color: rgb(15, 226, 15);
+    border: .2em rgb(15, 226, 15) solid;
+    border-radius: 50%;
+    display: inline-block;    
+  }
+
+  label:hover > .btn{
+    background-color: rgba(15, 226, 15, 0.4);
+    border: .2em rgba(15, 226, 15, 0) solid;
+    transition: 0.6s ease;  
+  }
+
+  label:active > .btn{
+    background-color: rgb(174, 245, 174);    
+  }
+
+  .meme-text{
+    width: 78%;
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .text{
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+    padding-right: 100%;
+    color: aliceblue;
+    font-size: 1.3em;
+    font-family: 'Water Brush';
+    transform: translateX(0);
+    transition: .4s;
+  }
+
+ 
+  
+  #btn-1:checked ~ .slider > .memes-div > .memes > .meme-img {
+    transform: translate(0,0);  
+}
+  #btn-2:checked ~ .slider > .memes-div > .memes > .meme-img {
+    transform: translate(-100%,0);    
+}
+  #btn-3:checked ~ .slider > .memes-div > .memes > .meme-img {
+    transform: translate(-200%,0);  
+}
+  #btn-4:checked ~ .slider > .memes-div > .memes > .meme-img {
+    transform: translate(-300%,0);  
+}
+
+
+  #btn-1:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(0,0);  
+}
+  #btn-2:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(-89%,0);     
+}
+  #btn-3:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(-177%,0);  
+}
+  #btn-4:checked ~ .slider > .under-img > .meme-text > .text {
+    transform: translate(-295%,0);  
+}
+
+
+  #btn-1:checked ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-1 {
+    background-color: inherit;
+    border: .2em rgb(15, 226, 15) solid;
+}
+  #btn-1:checked:hover ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-1 {
+    background-color: inherit;
+    border: .2em rgba(15, 226, 15, 0.4) solid;
+}
+
+  #btn-2:checked ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-2 {
+    background-color: inherit;
+    border: .2em rgb(15, 226, 15) solid;     
+}
+  #btn-2:checked:hover ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-2 {
+    background-color: inherit;
+    border: .2em rgba(15, 226, 15, 0.4) solid;     
+}
+
+  #btn-3:checked ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-3 {
+    background-color: inherit;
+    border: .2em rgb(15, 226, 15) solid; 
+}
+  #btn-3:checked:hover ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-3 {
+    background-color: inherit;
+    border: .2em rgba(15, 226, 15, 0.4) solid;
+}
+
+  #btn-4:checked ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-4 {
+    background-color: inherit;
+    border: .2em rgb(15, 226, 15) solid;  
+}
+#btn-4:checked:hover ~ .slider > .under-img > .slider-buttons > .label-link > label > .btn-4 {
+  background-color: inherit;
+  border: .2em rgba(15, 226, 15, 0.4) solid;
+}
+
+.footer-container {    
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;   
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github-link{
+  color: aliceblue;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.github-link:hover{
+  color: rgba(15, 226, 15, 0.4);
+}
+
+.copuright {
+  display: inline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.year-span {
+  padding-left: .2em;
+}
+
+.rs-link{
+  display: flex;
+  width: 5em;
+  height: 3em;
+  background-image: url(./assets/rs_school.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: .3s;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.rs-link:hover{
+  transition: .3s;
+  filter: invert(20%) sepia(100%) saturate(4.5) hue-rotate(70deg) ;
+}
+
+
+@media (max-width: 426px){
+  .wrapper{
+    max-width: 400px;
+  }
+
+  h1{
+    font-size: 1.5em;
+  }
+
+  .slider{
+    max-width: 100%;
+  }
+
+  .meme-img{
+    width: 25em;
+  }
+
+  .under-img{
+    flex-direction: column-reverse;
+  }
+
+  .meme-text{
+    align-self: flex-start;
+    width: 90%;
+  }
+
+  .text{
+    font-size: 1.2em;
+  }
+
+  .footer-container{
+    width: 95%;
+  }
+}
