@@ -22,7 +22,7 @@ footer{
 }
 
 .wrapper{
-    max-width: 1280px;
+    max-width: 80rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
